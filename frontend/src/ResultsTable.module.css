@@ -1,0 +1,43 @@
+.wrap { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 14px; background: var(--bg3); border-bottom: 1px solid var(--border);
+}
+.label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text3); font-weight: 500; }
+.count { font-size: 12px; color: var(--text2); }
+
+.tableWrap { overflow-x: auto; max-height: 420px; overflow-y: auto; }
+
+.table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.table th {
+  position: sticky; top: 0; z-index: 1;
+  background: var(--bg2); padding: 8px 12px;
+  text-align: left; font-weight: 500; font-size: 11px;
+  color: var(--text2); text-transform: uppercase; letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--border); white-space: nowrap;
+}
+.table td {
+  padding: 7px 12px; border-bottom: 1px solid var(--border);
+  color: var(--text); white-space: nowrap;
+  max-width: 220px; overflow: hidden; text-overflow: ellipsis;
+}
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: var(--bg3); }
+
+.null { color: var(--text3); font-style: italic; font-size: 11px; }
+
+.empty { text-align: center; padding: 2rem; color: var(--text3); font-size: 13px; }
+
+.pagination {
+  display: flex; align-items: center; gap: 6px; justify-content: center;
+  padding: 10px; border-top: 1px solid var(--border); background: var(--bg3);
+}
+.pagination button {
+  width: 28px; height: 28px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border); background: transparent;
+  color: var(--text2); cursor: pointer; font-size: 13px; transition: all 0.15s;
+}
+.pagination button:hover:not(:disabled) { background: var(--bg4); color: var(--text); }
+.pagination button:disabled { opacity: 0.3; cursor: not-allowed; }
+.pageInfo { font-size: 12px; color: var(--text2); padding: 0 6px; }
